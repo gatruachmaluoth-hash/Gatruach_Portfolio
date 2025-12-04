@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* About Section */
+.about {
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    color: #00bfff;
+    /* blue theme */
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #00bfff;
+    letter-spacing: 1px;
+}
+
+/* About Card */
+.about-card {
+    background: #0a0a0a;
+    /* dark tech background */
+    border: 2px solid #00bfff;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Animated border effect */
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px dashed #00bfff;
+    border-radius: 12px;
+    animation: borderRotate 3s linear infinite;
+}
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes it round */
+    object-fit: cover;
+    border: 4px solid #7b5cff;
+}
+
+@keyframes borderRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00bfff;
+}
+
+/* Icon Style */
+.about-card .icon {
+    color: #00f0ff;
+    animation: iconGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes iconGlow {
+    0% {
+        text-shadow: 0 0 5px #00bfff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #00f0ff;
+    }
+}
+
+.about-card p {
+    font-size: 18px;
+    color: #cce7ff;
+    text-align: left;
+}
+
+/* Home / Hero Section */
+.hero {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a0a;
+    /* dark tech background */
+    color: #00bfff;
+    /* blue theme */
+}
+
+.hero-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #0a0a0a;
+    border: 2px solid #00bfff;
+    border-radius: 15px;
+    padding: 40px 50px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Animated border effect */
+.hero-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px dashed #00bfff;
+    border-radius: 15px;
+    animation: borderRotate 4s linear infinite;
+}
+
+.hero-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00bfff;
+}
+
+/* Icon Style */
+.hero-card .icon {
+    color: #00f0ff;
+    animation: iconGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes iconGlow {
+    0% {
+        text-shadow: 0 0 5px #00bfff;
+    }
+
+    100% {
+        text-shadow: 0 0 25px #00f0ff;
+    }
+}
+
+/* Hero Text */
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-text span {
+    color: #00f0ff;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #cce7ff;
+}
+
+/* Button */
+.btn {
+    background: #00bfff;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background: #00f0ff;
+    box-shadow: 0 0 15px #00bfff;
+}
+
+
+/* Navbar */
+header {
+    background: #111;
+    padding: 15px 0;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo {
+    height: 40px;
+    /* adjust as needed */
+    width: 100px;
+    /* adjust as needed */
+    border-radius: 10px;
+    /* rounded corners */
+    object-fit: contain;
+    /* ensures the image scales properly */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1500&q=80") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text span {
+    color: #00bcd4;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #00bcd4;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: #0097a7;
+}
+
+/* Sections */
+section {
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Projects Section */
+.projects {
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+    color: #00bfff;
+    /* blue theme */
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #00bfff;
+    letter-spacing: 1px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Project Card */
+.project-card {
+    background: #0a0a0a;
+    /* dark tech background */
+    border: 2px solid #00bfff;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Animated border effect */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px dashed #00bfff;
+    border-radius: 12px;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* Icon Style */
+.project-card .icon {
+    color: #00f0ff;
+    margin-bottom: 10px;
+    animation: iconGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes iconGlow {
+    0% {
+        text-shadow: 0 0 5px #00bfff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #00f0ff;
+    }
+}
+
+.project-card h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #cce7ff;
+}
+
+@keyframes iconGlow {
+    0% {
+        text-shadow: 0 0 5px #00bfff;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #00f0ff;
+    }
+}
+
+
+.contact-card p {
+    font-size: 18px;
+}
+
+.contact-card a {
+    color: #00f0ff;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    margin-top: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#msg {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Make the form match the neon blue theme */
+.form-container {
+    background: #0a0a0a;
+    border: 2px solid #00bfff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative;
+}
+
+/* Input fields */
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #000;
+    color: #00f0ff;
+    border: 1px solid #00bfff;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-container input:focus {
+    box-shadow: 0 0 10px #00bfff;
+}
+
+/* Form labels */
+.form-container label {
+    color: #00f0ff;
+    font-weight: bold;
+}
+
+/* Button styled in blue cyber look */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #00bfff;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.form-container button:hover {
+    background: #00eaff;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+#msg {
+    text-align: center;
+    color: #00f0ff;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    opacity: 0.7;
+    background-color: #00eaff;
+}
